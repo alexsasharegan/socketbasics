@@ -5,8 +5,9 @@ socket.on('connect', function () {
 });
 
 socket.on('message', function (message) {
-	
-	$('.messages').append('<p>' + message.text + '</p>');
+	var momentTimestamp = moment(message.timestamp, 'x').local().format('h:mma');
+	$('.messages')
+		.append('<p><strong>' + momentTimestamp + ': </strong>' + message.text + '</p>');
 
 });
 
