@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<title>Socket.io Login</title>
+	<title>Socket.io Basics</title>
 </head>
 <body>
 
 	<div class="container">
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
-				<h1 style="display: inline;">Socket.io Login</h1>
+				<h1 style="display: inline;">Socket.io Messaging</h1>
 				<h4 class="pull-right" style="display: inline;">
 					<a href="https://github.com/alexsasharegan/socketbasics.git" class="navbar-link">
 						Source Code &lt;/&gt;
@@ -20,16 +20,21 @@
 			</div>
 		</div>
 
-	<form action="/chat.html" class="form">
-		<div class="form-group">
-			<label for="" >Display Name</label>
-			<input type="text" name="name" class="form-control" />
-			<input type="submit" value="Join Chat" class="btn btn-default">
+		<div class="">
+			<h4>
+				<a href="/">Change settings</a>
+			</h4>
 		</div>
-	</form>
 
+		<div class="messages">
+			<!-- Socket messages go here -->
+		</div>
+		
+		<form action="" id="message-form" class="form">
+			<input type="text" name="message" class="form-control" placeholder="Write your message here" />
+			<input type="submit" class="btn btn-default" />
+		</form>
 	</div>
-
 	<script src="/js/jquery.js"></script>
 	<script src="/js/socket.io.js"></script>
 	<script src="/js/moment.js"></script>
