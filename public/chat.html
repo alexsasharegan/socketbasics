@@ -6,12 +6,13 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<title>Socket.io Basics</title>
 </head>
-<body>
+<body class="msg">
 
 	<div class="container">
+
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
-				<h1 style="display: inline;">Socket.io Messaging</h1>
+				<h1 style="display: inline;">Messaging</h1>
 				<h4 class="pull-right" style="display: inline;">
 					<a href="https://github.com/alexsasharegan/socketbasics.git" class="navbar-link">
 						Source Code &lt;/&gt;
@@ -20,28 +21,46 @@
 			</div>
 		</div>
 
-		<h2 class="room-title">
-			<!-- Room title goes here -->
-		</h2>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 well">
 
-		<div class="">
-			<h4>
-				<a href="/">Change settings</a>
-			</h4>
-		</div>
+				<h2 class="room-title">
+					<!-- Room title goes here -->
+				</h2>
+				
+				<div class="">
+					<h4>
+						<a href="/">Change settings</a>
+					</h4>
+				</div>
+				
+				<ul class="messages list-group">
+					<!-- Socket messages go here -->
+				</ul>
 
-		<div class="messages">
-			<!-- Socket messages go here -->
+			</div>
 		</div>
 		
-		<form action="" id="message-form" class="form">
-			<input type="text" name="message" class="form-control" placeholder="Write your message here" />
-			<input type="submit" class="btn btn-default" />
-		</form>
+		<div class="navbar-fixed-bottom">
+			<form action="" id="message-form" class="form">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-comment"></i>
+						</span>
+						<input type="text" name="message" class="form-control" placeholder="Write your message here" />
+					</div>
+					<input type="submit" class="btn btn-default btn-block" />
+				</div>
+			</form>
+		</div>
+
 	</div>
+	<!-- LIBS -->
 	<script src="/js/jquery.js"></script>
 	<script src="/js/socket.io.js"></script>
 	<script src="/js/moment.js"></script>
+	<!-- SCRIPTS -->
 	<script src="/js/queryParams.js"></script>
 	<script src="/js/app.js"></script>
 </body>

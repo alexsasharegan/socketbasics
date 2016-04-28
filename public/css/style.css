@@ -1,7 +1,11 @@
-body {
+.msg {
 	padding-top: 70px;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
+	padding-bottom: 100px;
+}
+
+.vertical-center {
+	min-height: 100vh;
 	margin: 0;
+	display: flex;
+	align-items: center;
 }

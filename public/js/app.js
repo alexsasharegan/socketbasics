@@ -14,12 +14,12 @@ socket.on('connect', function () {
 
 socket.on('message', function (message) {
 	var momentTimestamp = moment(message.timestamp, 'x').local().format('h:mma');
-	$message = $('.messages');
+	$messages = $('.messages');
+	$message  = $('<li class="list-group-item"></li>');
 	
-	$message.append('<p><strong>' + message.name + ' ' + momentTimestamp + ': </strong>');
-	
-	$('.messages')
-		.append('<p>' + message.text + '</p>');
+	$message.append('<p><strong>' + message.name + ' ' + momentTimestamp + ': </strong></p>');
+	$message.append('<p>' + message.text + '</p>');
+	$messages.append($message);
 
 });
 
